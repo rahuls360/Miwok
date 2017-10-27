@@ -2,6 +2,10 @@ package com.example.android.miwok;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.ArrayAdapter;
+import android.widget.GridView;
+
+import java.util.ArrayList;
 
 public class NumbersActivity extends AppCompatActivity {
 
@@ -11,5 +15,34 @@ public class NumbersActivity extends AppCompatActivity {
 
         // Set the content of the activity to use the activity_main.xml layout file
         setContentView(R.layout.activity_numbers);
+
+        //Create an arraylist of numbers 1-10
+        ArrayList<String> words = new ArrayList<>();
+        words.add("one");
+        words.add("two");
+        words.add("three");
+        words.add("four");
+        words.add("five");
+        words.add("six");
+        words.add("seven");
+        words.add("eight");
+        words.add("nine");
+        words.add("ten");
+
+        ArrayAdapter<String> numbersAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, words);
+        GridView gridView = (GridView) findViewById(R.id.gridView);
+        gridView.setAdapter(numbersAdapter);
+
+//        int i=0;
+//        while (i<words.size())
+//        {
+//            TextView textView = new TextView(this);
+//            textView.setText(words.get(i));
+//            rootView.addView(textView);
+//            i++;
+//        }
+
+
+
     }
 }
