@@ -6,10 +6,10 @@
     android:layout_height="match_parent"
     tools:context="com.example.android.miwok.NumbersActivity">
 
-    <GridView
+    <ListView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/gridView"
-        android:numColumns="2"
-></GridView>
+        android:id="@+id/list"
+></ListView>
+
 </android.support.constraint.ConstraintLayout>
